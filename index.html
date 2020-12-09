@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>AnimeJS SVG Turbulence</title>
+  </head>
+  <body>
+
+    <svg viewBox="0 0 248 248.667">
+      <filter id="displacementFilter">
+        <feTurbulence
+          type="turbulence"
+          baseFrequency="0.05"
+          numOctaves="3"
+          result="turbulence"
+        />
+        <feDisplacementMap
+          in2="turbulence"
+          in="SourceGraphic"
+          scale="50"
+          xChannelSelector="R"
+          yChannelSelector="G"
+        />
+      </filter>
+      <path
+        id="logo"
+        style="filter: url(#displacementFilter); transform-origin: center"
+        fill="#00AE7B"
+        d="M124,86.421c21.006,0,38.095,17.089,38.095,38.095S145.006,162.612,124,162.612
+s-38.095-17.089-38.095-38.095S102.994,86.421,124,86.421 M124,57.85c-36.819,0-66.667,29.848-66.667,66.667
+S87.181,191.183,124,191.183s66.667-29.848,66.667-66.667S160.819,57.85,124,57.85L124,57.85z"
+      />
+    </svg>
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+      integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+      crossorigin="anonymous"
+    ></script>
+    <script src="app.js"></script>
+  </body>
+</html>

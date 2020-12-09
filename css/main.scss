@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    height: 100vh;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    overflow: hidden;
+    background: rgb(20, 20, 20);
+}
+
+svg {
+    width: 100%;
+
+    display: block;
+    margin: 0 auto;
+}
